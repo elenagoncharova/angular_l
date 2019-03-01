@@ -1,0 +1,17 @@
+
+<div class="top-block" style="background-image: url(../../assets/one.jpg)">
+  <div class="container">
+    <h1>Just write the text!</h1>
+    <div class="first">
+      <!--<input type="text" #mytext (input)="onKeyUp(mytext.value);">-->
+
+      <input type="text" (keyup.enter)="onKeyUp($event);">
+      <p>{{inputText}}</p>
+    </div>
+    <h1>Just write the text and click Enter!</h1>
+    <div>
+      <input type="text" (keyup.enter)="onKeyUp2($event);">
+      <p>{{inputText2}}</p>
+    </div>
+  </div>
+</div>
