@@ -1,0 +1,24 @@
+.item {
+  display: flex;
+  padding: 50px 10px;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+
+
+.text-product {
+  p{
+    font-size: 30px;
+  }
+}
+
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+

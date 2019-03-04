@@ -1,0 +1,16 @@
+<div class="container">
+
+  <div class="item">
+    <app-product [prodInfo]="prodInfo[0]" (pusher)="getItemData($event)"></app-product>
+    <app-product [prodInfo]="prodInfo[1]" (pusher)="getItemData($event)"></app-product>
+    <app-product [prodInfo]="prodInfo[2]" (pusher)="getItemData($event)"></app-product>
+  </div>
+
+  <div class="text-product">
+
+    <p>Name product: {{prodItem.name}}</p>
+    <p>Cost: {{prodItem.cost}}</p>
+    <p>Size: {{prodItem.size}}</p>
+    <p>Description: {{prodItem.describtion}}</p>
+  </div>
+</div>
