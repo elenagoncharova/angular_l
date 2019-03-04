@@ -1,38 +1,17 @@
 <div class="container">
-  <h2></h2>
-<div class="item">
-  <div class="product" (click)="addtext1();">
-    <img src="../../assets/ket.png" alt="">
-    <p>Click open Information</p>
-  </div>
-  <div class="product" (click)="addtext2();">
-    <img src="../../assets/ket.png" alt="">
-    <p>Click open Information</p>
-  </div>
-  <div class="product" (click)="addtext3();">
-    <img src="../../assets/ket.png" alt="">
-    <p>Click open Information</p>
+  <div class="item">
+    <div class="product" (click)="pushItemData();">
+      <img src="../../assets/ket.png" alt="">
+      <p>Click open Information</p>
+
+      <div class="text-product">
+
+        <p>Name product: {{prodInfo.name}}</p>
+        <p>Cost: {{prodInfo.cost}}</p>
+        <p>Size: {{prodInfo.size}}</p>
+        <p>Description: {{prodInfo.describtion}}</p>
+      </div>
+    </div>
   </div>
 </div>
 
-  <div class="text-product">
-    <table>
-      <tr>
-        <td>Name product</td>
-        <td>{{name}}</td>
-      </tr>
-      <tr>
-        <td>Cost</td>
-        <td>{{cost}}</td>
-      </tr>
-      <tr>
-        <td>Size</td>
-        <td>{{size}}</td>
-      </tr>
-      <tr>
-        <td>Description</td>
-        <td>{{describtion}}</td>
-      </tr>
-    </table>
-  </div>
-</div>

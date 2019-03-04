@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-product',
@@ -7,28 +7,10 @@ import { Component } from '@angular/core';
 })
 export class ProductComponent {
 
-  name = '----';
-  cost = '----';
-  size = '----';
-  describtion = '----';
+  @Input() prodInfo: object;
+  @Output() pusher = new EventEmitter();
 
-  addtext1(){
-    this.name = 'name';
-    this.cost = '50$';
-    this.size = '15 x 20';
-    this.describtion = 'test test test';
+  pushItemData(): void {
+    this.pusher.emit(this.prodInfo);
   }
-  addtext2(){
-    this.name = 'name2';
-    this.cost = '500$';
-    this.size = '20 x 30';
-    this.describtion = 'test ghgh test';
-  }
-  addtext3(){
-    this.name = 'Grggg';
-    this.cost = '80$';
-    this.size = '40 x 20';
-    this.describtion = 'teghghst test test';
-  }
-
 }
