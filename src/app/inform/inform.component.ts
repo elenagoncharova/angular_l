@@ -9,22 +9,22 @@ export class InformComponent {
 
   prodInfo = [
     {
-      name: 1,
-      cost: 'figchmgmjhmrst',
-      size: 5,
-      describtion: 'dgthtdhgdgjm'
+      name: 'First',
+      cost: '50$',
+      size: '25 x 50',
+      describtion: 'describtion one'
     },
     {
-      name: 1,
-      cost: 'first',
-      size: 5,
-      describtion: 'teset'
+      name: 'Second',
+      cost: '100$',
+      size: '50 x 25',
+      describtion: 'describtion two'
     },
     {
-      name: 1,
-      cost: 'firsnt',
-      size: 5,
-      describtion: 'tesfyhnjhghmmet'
+      name: 'third',
+      cost: '150$',
+      size: '5 x 10',
+      describtion: 'describtion three'
     }
   ];
 
@@ -37,7 +37,6 @@ export class InformComponent {
   };
 
   getItemData($event) {
-    console.log(this)
     this.prodItem = $event;
   }
 

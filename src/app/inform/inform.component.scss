@@ -1,17 +1,35 @@
 .item {
   display: flex;
-  padding: 50px 10px;
+  padding: 50px 10px 30px;
   align-items: center;
   justify-content: space-between;
   text-align: center;
+  cursor: pointer;
 }
 
 
 
 .text-product {
-  p{
-    font-size: 30px;
+  min-width: 300px;
+  padding: 25px 0;
+  td{
+    font-size: 25px;
+    padding: 5px 10px;
   }
+}
+
+.reset {
+  display: block;
+  background-color: #27ddd9;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 25px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 

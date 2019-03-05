@@ -9,6 +9,7 @@ import { HeaderComponent } from './header/header.component';
 import { TopBlockComponent } from './top-block/top-block.component';
 import { ProductComponent } from './product/product.component';
 import { InformComponent } from './inform/inform.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { InformComponent } from './inform/inform.component';
     HeaderComponent,
     TopBlockComponent,
     ProductComponent,
-    InformComponent
+    InformComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -5,12 +5,22 @@
     <app-product [prodInfo]="prodInfo[1]" (pusher)="getItemData($event)"></app-product>
     <app-product [prodInfo]="prodInfo[2]" (pusher)="getItemData($event)"></app-product>
   </div>
+    <button class="reset" (click)="prodItem = prodInfo">reset</button>
+    <hr>
 
-  <div class="text-product">
+  <table class="text-product">
 
-    <p>Name product: {{prodItem.name}}</p>
-    <p>Cost: {{prodItem.cost}}</p>
-    <p>Size: {{prodItem.size}}</p>
-    <p>Description: {{prodItem.describtion}}</p>
-  </div>
+    <tr>
+        <td>Name product:</td>
+        <td>{{prodItem?.name}}</td>
+    <tr>
+        <td>Cost: </td>
+        <td>{{prodItem?.cost}}</td>
+    <tr>
+        <td>Size:</td>
+        <td>{{prodItem?.size}}</td>
+    <tr>
+        <td>Description:</td>
+        <td>{{prodItem?.describtion}}</td>
+  </table>
 </div>
