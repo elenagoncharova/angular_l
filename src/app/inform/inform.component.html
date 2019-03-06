@@ -1,26 +1,26 @@
 <div class="container">
 
   <div class="item">
-    <app-product [prodInfo]="prodInfo[0]" (pusher)="getItemData($event)"></app-product>
-    <app-product [prodInfo]="prodInfo[1]" (pusher)="getItemData($event)"></app-product>
-    <app-product [prodInfo]="prodInfo[2]" (pusher)="getItemData($event)"></app-product>
+      <app-product *ngFor="let prodInfo of prodInfo" [prodInfo]="prodInfo" (pusher)="getItemData($event)"></app-product>
+    <!--<app-product [prodInfo]="prodInfo[0]" (pusher)="getItemData($event)"></app-product>-->
+    <!--<app-product [prodInfo]="prodInfo[1]" (pusher)="getItemData($event)"></app-product>-->
+    <!--<app-product [prodInfo]="prodInfo[2]" (pusher)="getItemData($event)"></app-product>-->
   </div>
     <button class="reset" (click)="prodItem = prodInfo">reset</button>
     <hr>
 
   <table class="text-product">
-
     <tr>
         <td>Name product:</td>
         <td>{{prodItem?.name}}</td>
+    </tr>
     <tr>
         <td>Cost: </td>
         <td>{{prodItem?.cost}}</td>
-    <tr>
-        <td>Size:</td>
-        <td>{{prodItem?.size}}</td>
+    </tr>
     <tr>
         <td>Description:</td>
         <td>{{prodItem?.describtion}}</td>
+    </tr>
   </table>
 </div>

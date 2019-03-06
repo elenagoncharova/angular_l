@@ -1,5 +1,6 @@
 .item {
-
+  border: 1px solid;
+  padding: 20px;
   img{
     max-width: 200px;
   }
@@ -7,4 +8,8 @@
     padding: 10px 0;
     font-size: 20px;
   }
+}
+
+.not-active {
+  color: #ee6666;
 }

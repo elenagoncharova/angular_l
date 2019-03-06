@@ -1,14 +1,23 @@
 <div class="container">
-  <div class="item">
+  <div class="item" >
     <div class="product" (click)="pushItemData();">
-      <img src="../../assets/ket.png" alt="">
       <div class="text-product">
-
         <p>Name product: {{prodInfo.name}}</p>
         <p>Cost: {{prodInfo.cost}}</p>
-        <p>Size: {{prodInfo.size}}</p>
         <p>Description: {{prodInfo.describtion}}</p>
       </div>
+
+      <div>
+        <div *ngIf="showActiveState(); else notActive">
+          <p>This is active item!</p>
+        </div>
+        <ng-template #notActive>
+          <p class="not-active">This is not active item!</p>
+        </ng-template>
+
+        <app-description *ngFor="let information of prodInfo.information" [information]="information"></app-description>
+      </div>
+
     </div>
   </div>
 </div>
