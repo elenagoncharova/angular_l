@@ -5,11 +5,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.scss']
 })
-export class ContentComponent implements OnInit {
+export class ContentComponent {
+  lists = [1, 2, 3, 4];
+  current = 1;
 
-  constructor() { }
-
-  ngOnInit() {
+  onClisk(number: number) {
+    this.current = number;
   }
-
 }

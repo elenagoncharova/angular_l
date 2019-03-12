@@ -12,3 +12,23 @@
   line-height: 2;
   font-size: 16px;
 }
+
+.list-items {
+  display: flex;
+  align-content: center;
+  padding: 0;
+  li{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: calc(100% / 4);
+    border: 1px solid #000;
+  }
+}
+
+.switch {
+  padding: 10px;
+  font-size: 20px;
+}
