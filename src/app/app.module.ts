@@ -11,6 +11,9 @@ import { ProductComponent } from './product/product.component';
 import { InformComponent } from './inform/inform.component';
 import { FooterComponent } from './footer/footer.component';
 import { DescriptionComponent } from './description/description.component';
+import { ContentComponent } from './content/content.component';
+import { BackgroundDirective } from './directives/background.directive';
+import { TextStyleDirective } from './directives/text-style.directive';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { DescriptionComponent } from './description/description.component';
     ProductComponent,
     InformComponent,
     FooterComponent,
-    DescriptionComponent
+    DescriptionComponent,
+    ContentComponent,
+    BackgroundDirective,
+    TextStyleDirective
   ],
   imports: [
     BrowserModule,

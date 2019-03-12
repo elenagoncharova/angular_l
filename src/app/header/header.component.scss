@@ -6,6 +6,9 @@ h1{
 .nav a{
   text-decoration:none;
 }
+h2{
+  color: #ffffff;
+}
 .nav{
   height:70px;
   background:#222;
@@ -36,7 +39,7 @@ h1{
   display:block;
   color:#222;
   width:150px;
-  line-height:50px !important;
+  line-height:50px;
   font:700 14px 'pt sans',sans-serif;
   background:#eee;
   border-bottom:1px solid #ddd;

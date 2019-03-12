@@ -1,11 +1,16 @@
 <div class='nav'>
   <ul>
-    <li><a href='#'>{{menuHome}}</a></li>
-    <li><a href='#'>{{menuArtikle}}</a></li>
-    <li><a href='#'>{{menuSubscription}}</a></li>
-    <li><a href='#'>{{menuAbout}}</a></li>
-    <li><a href='#'>{{menuContact}}</a></li>
+    <li *ngFor="let menu of menuLink">
+      <a href='#' >{{menu.link}}</a>
+      <ul>
+        <li *ngFor="let downLink of menu.downMenu">
+          <a href="">{{downLink}}</a>
+        </li>
+      </ul>
+    </li>
   </ul>
+
+  <h2>{{hiuser}}</h2>
 
   <button>{{login}}</button>
 </div>

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+
 
 @Component({
   selector: 'app-header',
@@ -6,12 +7,31 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  menuHome = 'Home';
-  menuArtikle = 'Articles';
-  menuSubscription = 'Subscription';
-  menuAbout = 'About Us';
-  menuContact = 'Contact Us';
 
+  login = 'Login';
+  hiuser = 'Hello people!';
 
-  login = 'Hi people!';
+  menuLink = [
+    {
+      link: 'Home',
+      downMenu: ['about us', 'contacts' ]
+    },
+    {
+      link: 'Articles',
+      downMenu: [ 'description', 'contacts' ]
+    },
+    {
+      link: 'Subscription',
+      downMenu: [ 'service', 'about', 'contacts' ]
+    },
+    {
+      link: 'About Us',
+      downMenu: [ 'service', 'about', 'contacts' ]
+    },
+    {
+      link: 'Contact Us',
+      downMenu: [ 'service', 'about', 'contacts' ]
+    }
+  ];
+
 }

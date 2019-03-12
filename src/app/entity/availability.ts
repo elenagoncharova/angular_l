@@ -10,4 +10,5 @@ export interface Availability {
     number: number;
     information: object;
     prodInfo: object;
+    downMenu: string;
 }

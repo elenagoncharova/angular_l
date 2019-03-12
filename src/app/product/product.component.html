@@ -15,7 +15,7 @@
           <p class="not-active">This is not active item!</p>
         </ng-template>
 
-        <app-description *ngFor="let information of prodInfo.information" [information]="information"></app-description>
+        <app-description *ngFor="let information of prodInfo.information; let idx = index" [itemIndex]="idx" [information]="information"></app-description>
       </div>
 
     </div>
