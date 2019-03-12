@@ -1,4 +1,4 @@
-import {Directive, ElementRef, OnInit, Renderer2} from '@angular/core';
+import {Directive, ElementRef, HostListener, OnInit, Renderer2} from '@angular/core';
 
 @Directive({
   selector: '[appTextStyle]'
@@ -12,6 +12,16 @@ export class TextStyleDirective implements OnInit {
 
     this.renderer.setStyle(nativeElement, 'color', 'blue');
     this.renderer.addClass(nativeElement, 'text-size');
+  }
+
+  @HostListener('mouseenter') mouseEnter() {
+    const  {nativeElement} = this.element;
+    this.renderer.setStyle(nativeElement, 'background-color', 'gainsboro');
+  }
+
+  @HostListener('mouseleave') mouseLeave() {
+    const  {nativeElement} = this.element;
+    this.renderer.setStyle(nativeElement, 'background-color', 'transparent');
   }
 
 }
