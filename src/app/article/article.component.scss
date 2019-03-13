@@ -1,0 +1,15 @@
+.article {
+  padding: 15px;
+  margin: 15px;
+  border: #3b3b3b solid 1px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+  h1 {
+    font-size: 16px;
+    margin-bottom: 50px;
+  }
+  span, p {
+    font-weight: normal;
+  }
+}

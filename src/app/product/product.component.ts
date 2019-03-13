@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, TemplateRef } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Availability } from '../entity/availability';
 
 @Component({
@@ -8,13 +8,13 @@ import { Availability } from '../entity/availability';
 })
 export class ProductComponent {
 
-  @Input() prodInfo: Availability;
+  @Input() product: Availability;
   @Output() pusher = new EventEmitter();
   activeItem = false;
 
 
   pushItemData(): void {
-    this.pusher.emit(this.prodInfo);
+    this.pusher.emit(this.product);
     this.activeItem = !this.activeItem;
   }
 

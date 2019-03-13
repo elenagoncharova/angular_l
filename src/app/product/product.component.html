@@ -1,10 +1,9 @@
-<div class="container">
   <div class="item" >
     <div class="product" (click)="pushItemData();">
       <div class="text-product">
-        <p>Name product: {{prodInfo.name}}</p>
-        <p>Cost: {{prodInfo.cost}}</p>
-        <p>Description: {{prodInfo.describtion}}</p>
+        <p>Name product: {{product.name}}</p>
+        <p>Cost: {{product.cost}}</p>
+        <p>Description: {{product.describtion}}</p>
       </div>
 
       <div>
@@ -15,10 +14,10 @@
           <p class="not-active">This is not active item!</p>
         </ng-template>
 
-        <app-description *ngFor="let information of prodInfo.information; let idx = index" [itemIndex]="idx" [information]="information"></app-description>
+        <app-description *ngFor="let information of product.information; let idx = index" [itemIndex]="idx" [information]="information"></app-description>
       </div>
 
     </div>
   </div>
-</div>
+
 

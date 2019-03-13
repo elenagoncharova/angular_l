@@ -1,12 +1,12 @@
 <div class="container">
 
   <div class="item">
-      <app-product *ngFor="let prodInfo of prodInfo" [prodInfo]="prodInfo" (pusher)="getItemData($event)"></app-product>
+      <app-product class="col-lg-3" *ngFor="let prodInfo of product" [product]="prodInfo" (pusher)="getItemData($event)"></app-product>
     <!--<app-product [prodInfo]="prodInfo[0]" (pusher)="getItemData($event)"></app-product>-->
     <!--<app-product [prodInfo]="prodInfo[1]" (pusher)="getItemData($event)"></app-product>-->
     <!--<app-product [prodInfo]="prodInfo[2]" (pusher)="getItemData($event)"></app-product>-->
   </div>
-    <button class="reset" (click)="prodItem = prodInfo">reset</button>
+    <button class="reset" (click)="prodItem = product">reset</button>
     <hr>
 
   <table class="text-product">

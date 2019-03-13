@@ -14,6 +14,12 @@ import { DescriptionComponent } from './description/description.component';
 import { ContentComponent } from './content/content.component';
 import { BackgroundDirective } from './directives/background.directive';
 import { TextStyleDirective } from './directives/text-style.directive';
+import { ProdService } from './prod.service';
+import { HttpClientModule } from '@angular/common/http';
+import { ArticleService } from './articles.service';
+import { MainContainerComponent } from './main-container/main-container.component';
+import { ArticleComponent } from './article/article.component';
+import { FormsComponent } from './forms/forms.component';
 
 @NgModule({
   declarations: [
@@ -26,14 +32,18 @@ import { TextStyleDirective } from './directives/text-style.directive';
     DescriptionComponent,
     ContentComponent,
     BackgroundDirective,
-    TextStyleDirective
+    TextStyleDirective,
+    MainContainerComponent,
+    ArticleComponent,
+    FormsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ ProdService, ArticleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

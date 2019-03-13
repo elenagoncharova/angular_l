@@ -1,0 +1,12 @@
+<div class="article" (click)="getComments()">
+  <h1>Title: <i>{{article.title}}</i></h1>
+  <p>{{article.content}}</p>
+
+  <div *ngIf="comments">
+    <hr>
+    <h1>Comments</h1>
+    <div *ngFor="let comment of comments">
+      <p>{{comment.id}}: {{comment.title}}</p>
+    </div>
+  </div>
+</div>
