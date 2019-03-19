@@ -20,7 +20,7 @@ import { ArticleService } from './articles.service';
 import { MainContainerComponent } from './main-container/main-container.component';
 import { ArticleComponent } from './article/article.component';
 import { Form1Component } from './form1/form1.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { Form2Component } from './form2/form2.component';
 
 @NgModule({
@@ -45,7 +45,8 @@ import { Form2Component } from './form2/form2.component';
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-      FormsModule
+      FormsModule,
+      ReactiveFormsModule
   ],
   providers: [ ProdService, ArticleService],
   bootstrap: [AppComponent]

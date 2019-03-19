@@ -1,3 +1,45 @@
-<p>
-  form2 works!
-</p>
+<div class="container">
+  <h2>Пример 2: Reactive Forms</h2>
+  <div class="form1">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+      <div formGroupName="user">
+        <div class="form-group" [ngClass]="{'has-error': form.get('user.email').invalid && form.get('user.email').touched}">
+          <label>Email</label>
+          <input type="text" class="form-control" formControlName="email">
+
+          <p *ngIf="form.get('user.email').invalid && form.get('user.email').touched">
+            <span *ngIf="form.get('user.email').errors['email'] && form.get('user.email').touched">Введите корректный Email!</span>
+            <span *ngIf="form.get('user.email').errors['emailIsUsed']">Такой Email уже существует!</span>
+          </p>
+        </div>
+        <div class="form-group" [ngClass]="{'has-error': form.get('user.password').invalid && form.get('user.password').touched}">
+          <label>Пароль</label>
+          <input type="password" class="form-control" formControlName="password">
+
+          <p *ngIf="form.get('user.password').invalid && form.get('user.password').touched">
+            <span *ngIf="form.get('user.password').errors['required']">Пароль не должен быть пустым!</span>
+            <span *ngIf="form.get('user.password').errors['lengthError']">Пароль не должен быть меньше {{charseCount}} символов!</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Выберите страну</label>
+        <select class="form-control" formControlName="country">
+          <option value="ru">Россия</option>
+          <option value="by">Белоруссия</option>
+          <option value="ua">Украина</option>
+        </select>
+      </div>
+      <div class="radio" *ngFor="let ans of answers">
+        <label>
+          <input type="radio" [value]="ans.type" formControlName="answer"> {{ans.text}}
+        </label>
+      </div>
+      <button class="btn btn-success" type="submit" [disabled]="form.invalid">Сохранить</button>
+
+    </form>
+  </div>
+
+</div>
