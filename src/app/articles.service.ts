@@ -1,9 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import {Observable, Subject} from 'rxjs';
 
 @Injectable()
 export class ArticleService {
+
+    public $articles = new Subject();
+
 
     constructor(
         private httpClient: HttpClient

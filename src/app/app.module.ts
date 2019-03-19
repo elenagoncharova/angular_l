@@ -19,7 +19,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { ArticleService } from './articles.service';
 import { MainContainerComponent } from './main-container/main-container.component';
 import { ArticleComponent } from './article/article.component';
-import { FormsComponent } from './forms/forms.component';
+import { Form1Component } from './form1/form1.component';
+import {FormsModule} from '@angular/forms';
+import { Form2Component } from './form2/form2.component';
 
 @NgModule({
   declarations: [
@@ -35,13 +37,15 @@ import { FormsComponent } from './forms/forms.component';
     TextStyleDirective,
     MainContainerComponent,
     ArticleComponent,
-    FormsComponent,
+    Form1Component,
+    Form2Component,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+      FormsModule
   ],
   providers: [ ProdService, ArticleService],
   bootstrap: [AppComponent]
