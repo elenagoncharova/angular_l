@@ -2,7 +2,6 @@
   <h2>Пример 2: Reactive Forms</h2>
   <div class="form1">
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
-
       <div formGroupName="user">
         <div class="form-group" [ngClass]="{'has-error': form.get('user.email').invalid && form.get('user.email').touched}">
           <label>Email</label>
@@ -43,3 +42,5 @@
   </div>
 
 </div>
+
+<hr>

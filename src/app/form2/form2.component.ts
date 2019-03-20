@@ -1,13 +1,12 @@
 import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {el} from '@angular/platform-browser/testing/src/browser_util';
+import { FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-form2',
   templateUrl: './form2.component.html',
   styleUrls: ['./form2.component.scss']
 })
-export class Form2Component implements OnInit{
+export class Form2Component implements OnInit {
 
   answers = [{
     type: 'yes',
@@ -21,6 +20,7 @@ export class Form2Component implements OnInit{
 
   charseCount = 5;
 
+
   ngOnInit() {
     this.form = new FormGroup({
       user: new FormGroup({
@@ -32,7 +32,7 @@ export class Form2Component implements OnInit{
     });
   }
 
-  onSubmit(){
+  onSubmit() {
     console.log('submited', this.form);
   }
 
@@ -45,7 +45,7 @@ export class Form2Component implements OnInit{
     return null;
   }
 
-  checkForEmail(control: FormControl): Promise<any>{
+  checkForEmail(control: FormControl): Promise<any> {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         if (control.value === 'test@mail.ru'){
@@ -58,5 +58,4 @@ export class Form2Component implements OnInit{
       }, 300);
     });
   }
-
 }

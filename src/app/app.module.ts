@@ -14,6 +14,7 @@ import { DescriptionComponent } from './description/description.component';
 import { ContentComponent } from './content/content.component';
 import { BackgroundDirective } from './directives/background.directive';
 import { TextStyleDirective } from './directives/text-style.directive';
+import { ValidatorMessageComponent } from './directives/validator-message.directive';
 import { ProdService } from './prod.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ArticleService } from './articles.service';
@@ -22,6 +23,8 @@ import { ArticleComponent } from './article/article.component';
 import { Form1Component } from './form1/form1.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { Form2Component } from './form2/form2.component';
+import { Form3Component } from './form3/form3.component';
+import {CustomSelectComponent} from './shared/custom-select/custom-select.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +42,9 @@ import { Form2Component } from './form2/form2.component';
     ArticleComponent,
     Form1Component,
     Form2Component,
+    ValidatorMessageComponent,
+    Form3Component,
+    CustomSelectComponent
   ],
   imports: [
     BrowserModule,
