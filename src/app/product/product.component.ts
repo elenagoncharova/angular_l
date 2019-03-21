@@ -8,6 +8,8 @@ import { Availability } from '../entity/availability';
 })
 export class ProductComponent {
 
+  cost = 5;
+
   @Input() product: Availability;
   @Output() pusher = new EventEmitter();
   activeItem = false;

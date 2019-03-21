@@ -25,6 +25,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { Form2Component } from './form2/form2.component';
 import { Form3Component } from './form3/form3.component';
 import {CustomSelectComponent} from './shared/custom-select/custom-select.component';
+import { PipeComponent } from './pipe/pipe.component';
+import {PowPipe} from './pow.pipe';
+
 
 @NgModule({
   declarations: [
@@ -44,7 +47,9 @@ import {CustomSelectComponent} from './shared/custom-select/custom-select.compon
     Form2Component,
     ValidatorMessageComponent,
     Form3Component,
-    CustomSelectComponent
+    CustomSelectComponent,
+    PipeComponent,
+    PowPipe
   ],
   imports: [
     BrowserModule,
