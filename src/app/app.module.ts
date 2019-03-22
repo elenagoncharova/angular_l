@@ -27,6 +27,7 @@ import { Form3Component } from './form3/form3.component';
 import {CustomSelectComponent} from './shared/custom-select/custom-select.component';
 import { PipeComponent } from './pipe/pipe.component';
 import {PowPipe} from './pow.pipe';
+import {CarFilterPipe} from './car-filter.pipe';
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import {PowPipe} from './pow.pipe';
     Form3Component,
     CustomSelectComponent,
     PipeComponent,
-    PowPipe
+    PowPipe,
+    CarFilterPipe
   ],
   imports: [
     BrowserModule,
