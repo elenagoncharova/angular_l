@@ -21,13 +21,16 @@ import { ArticleService } from './articles.service';
 import { MainContainerComponent } from './main-container/main-container.component';
 import { ArticleComponent } from './article/article.component';
 import { Form1Component } from './form1/form1.component';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Form2Component } from './form2/form2.component';
 import { Form3Component } from './form3/form3.component';
-import {CustomSelectComponent} from './shared/custom-select/custom-select.component';
+import { CustomSelectComponent } from './shared/custom-select/custom-select.component';
 import { PipeComponent } from './pipe/pipe.component';
-import {PowPipe} from './pow.pipe';
-import {CarFilterPipe} from './car-filter.pipe';
+import { PowPipe } from './pow.pipe';
+import { CarFilterPipe } from './car-filter.pipe';
+import { Page1Component } from './pages/page1/page1.component';
+import { Page2Component } from './pages/page2/page2.component';
+
 
 
 @NgModule({
@@ -51,7 +54,9 @@ import {CarFilterPipe} from './car-filter.pipe';
     CustomSelectComponent,
     PipeComponent,
     PowPipe,
-    CarFilterPipe
+    CarFilterPipe,
+    Page1Component,
+    Page2Component
   ],
   imports: [
     BrowserModule,
@@ -59,7 +64,7 @@ import {CarFilterPipe} from './car-filter.pipe';
     NgbModule,
     HttpClientModule,
       FormsModule,
-      ReactiveFormsModule
+      ReactiveFormsModule,
   ],
   providers: [ ProdService, ArticleService],
   bootstrap: [AppComponent]

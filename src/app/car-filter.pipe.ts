@@ -7,7 +7,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class CarFilterPipe implements PipeTransform {
 
     transform(carList, searchStr: string, fieldName: string) {
-        console.log('Filter pipe started');
+        console.log('Started');
 
         if (carList.length === 0 || searchStr === '') {
             return carList;

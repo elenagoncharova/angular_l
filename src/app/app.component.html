@@ -18,6 +18,15 @@
     <br>
     <br>
     <router-outlet></router-outlet>
+
+    <div class="container">
+        <h1>Pages</h1>
+        <ul class="nav navbar-nav">
+            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/">Home</a></li>
+            <li routerLinkActive="active"><a routerLink="cars">Cars</a></li>
+        </ul>
+        <router-outlet></router-outlet>
+    </div>
 </div>
 
 <br>
