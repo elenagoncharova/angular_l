@@ -27,6 +27,7 @@ import {ValidatorMessageComponent} from './directives/validator-message.directiv
 import { PipeComponent } from './pages/pipe/pipe.component';
 import {InputFilterPipe} from './input-filter.pipe';
 import { SwitchComponent } from './pages/switch/switch.component';
+import { AddItemModalComponent } from './pages/add-item-modal/add-item-modal.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { SwitchComponent } from './pages/switch/switch.component';
     ValidatorMessageComponent,
     PipeComponent,
     InputFilterPipe,
-    SwitchComponent
+    SwitchComponent,
+    AddItemModalComponent
   ],
   imports: [
     BrowserModule,
@@ -60,6 +62,7 @@ import { SwitchComponent } from './pages/switch/switch.component';
     ReactiveFormsModule,
   ],
   providers: [ProdService, ArticleService, NgbModalConfig, NgbModal, NgbActiveModal],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [AddItemModalComponent]
 })
 export class AppModule { }

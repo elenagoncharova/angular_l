@@ -68,4 +68,22 @@ export class ProdService {
             ]
         }
     ];
+    public addNewProduct(name, price): void {
+        this.prodInfo.push(
+            {
+                name: name,
+                cost: price,
+                describtion: 'Test one',
+                information: [
+                    {
+                        id: 1,
+                        name: 'Product 1',
+                        size: '25 x 50',
+                        availability: 'yes',
+                        number: 12345
+                    }
+                ]
+            },
+        );
+    }
 }
