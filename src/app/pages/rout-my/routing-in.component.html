@@ -1,0 +1,9 @@
+<br>
+<br>
+<div class="container">
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let car of cars">
+      <a [routerLink]="[car.id + car.name]">{{car.name}}</a>
+    </li>
+  </ul>
+</div>
