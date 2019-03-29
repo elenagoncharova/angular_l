@@ -28,6 +28,9 @@ import { PipeComponent } from './pages/pipe/pipe.component';
 import {InputFilterPipe} from './input-filter.pipe';
 import { SwitchComponent } from './pages/switch/switch.component';
 import { AddItemModalComponent } from './pages/add-item-modal/add-item-modal.component';
+import {RoutingInComponent} from './pages/rout-my/routing-in.component';
+import {CarsService} from '../service/inform.service';
+import { InfoPageComponent } from './pages/rout-my/info-page/info-page.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +54,9 @@ import { AddItemModalComponent } from './pages/add-item-modal/add-item-modal.com
     PipeComponent,
     InputFilterPipe,
     SwitchComponent,
-    AddItemModalComponent
+    AddItemModalComponent,
+    RoutingInComponent,
+    InfoPageComponent
   ],
   imports: [
     BrowserModule,
@@ -61,7 +66,7 @@ import { AddItemModalComponent } from './pages/add-item-modal/add-item-modal.com
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [ProdService, ArticleService, NgbModalConfig, NgbModal, NgbActiveModal],
+  providers: [ProdService, ArticleService, NgbModalConfig, NgbModal, NgbActiveModal, CarsService],
   bootstrap: [AppComponent],
   entryComponents: [AddItemModalComponent]
 })

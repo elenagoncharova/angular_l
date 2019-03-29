@@ -6,6 +6,8 @@ import {HomeComponent} from './home/home.component';
 import {FormComponent} from './pages/form/form.component';
 import {PipeComponent} from './pages/pipe/pipe.component';
 import {SwitchComponent} from './pages/switch/switch.component';
+import {RoutingInComponent} from './pages/rout-my/routing-in.component';
+import {InfoPageComponent} from './pages/rout-my/info-page/info-page.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -13,7 +15,9 @@ const routes: Routes = [
   { path: 'articles', component: ArticlesComponent },
   { path: 'form', component: FormComponent },
   { path: 'pipe', component: PipeComponent },
-  { path: 'switch', component: SwitchComponent }
+  { path: 'switch', component: SwitchComponent },
+  { path: 'routIn', component: RoutingInComponent },
+  { path: 'routIn/:id', component: InfoPageComponent }
 ];
 
 @NgModule({
