@@ -1,0 +1,19 @@
+<div class="container">
+  <br>
+  <br>
+  <ul class="row">
+    <li class="col-lg-3" *ngFor="let list of lists" (click)="onClisk(list)">
+      <a class="nav-link">{{list}}</a>
+    </li>
+  </ul>
+
+  <div [ngSwitch]="current" class="switch">
+    <p *ngSwitchCase="1">1</p>
+    <p *ngSwitchCase="2">2</p>
+    <p *ngSwitchCase="3">3</p>
+    <p *ngSwitchDefault>Default</p>
+  </div>
+
+  <br>
+  <br>
+</div>

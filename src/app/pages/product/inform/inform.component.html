@@ -1,0 +1,27 @@
+<div class="container">
+
+  <div class="item row">
+    <app-goods class="col-lg-4" *ngFor="let prodInfo of product" [product]="prodInfo" (pusher)="getItemData($event)"></app-goods>
+  </div>
+  <button class="reset btn btn-secondary" (click)="prodItem = product">Rest</button>
+  <hr>
+
+  <table class="text-product">
+    <tr>
+      <td>Name product:</td>
+      <td>{{prodItem?.name}}</td>
+    </tr>
+    <tr>
+      <td>Cost: </td>
+      <td>{{prodItem?.cost}}</td>
+    </tr>
+    <tr>
+      <td>Description:</td>
+      <td>{{prodItem?.describtion}}</td>
+    </tr>
+  </table>
+
+  <hr>
+</div>
+
+

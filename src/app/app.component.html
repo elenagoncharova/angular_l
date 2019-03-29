@@ -1,35 +1,11 @@
 
-<div>
-    <app-header></app-header>
-    <!--<app-top-block></app-top-block>-->
-    <app-inform></app-inform>
-
-    <app-content></app-content>
-    <app-main-container></app-main-container>
-
-    <app-form1></app-form1>
-    <hr>
-    <app-form2></app-form2>
-
-    <app-form3></app-form3>
-    <br>
-    <br>
-    <app-pipe></app-pipe>
-    <br>
-    <br>
-    <router-outlet></router-outlet>
-
-    <div class="container">
-        <h1>Pages</h1>
-        <ul class="nav navbar-nav">
-            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/">Home</a></li>
-            <li routerLinkActive="active"><a routerLink="cars">Cars</a></li>
-        </ul>
-        <router-outlet></router-outlet>
+<div class="content_body">
+    <div class="top_element">
+        <app-header></app-header>
+        <app-pages></app-pages>
     </div>
+    <app-footer></app-footer>
 </div>
 
-<br>
-<br>
 
-<app-footer></app-footer>
+

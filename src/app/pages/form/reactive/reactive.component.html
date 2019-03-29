@@ -1,0 +1,90 @@
+<br>
+<br>
+<div class="container">
+  <h2>Пример 2: Валидация в шаблоне Reactive Forms</h2>
+  <form novalidate [formGroup]="signUpForm" (submit)="submitForm($event);">
+    <div class="form-group">
+      <label>User Name</label>
+      <input type="text" class="form-control" formControlName="user_name">
+    </div>
+    <validator-message [field]="signUpForm.get('user_name')"></validator-message>
+
+    <fieldset formGroupName="address">
+      <legend>Address</legend>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label>Country</label>
+            <input type="text" class="form-control" formControlName="country">
+          </div>
+          <validator-message [field]="signUpForm.get('address').get('country')"></validator-message>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label>City</label>
+            <input type="text" class="form-control" formControlName="city">
+          </div>
+          <validator-message [field]="signUpForm.get('address').get('city')"></validator-message>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset formArrayName="contacts">
+      <legend>Contacts</legend>
+      <div class="form-group" *ngFor="let contact of contacts.controls; let i = index">
+        <div class="row">
+          <div class="col-md-3">
+            <custom-select [options]="contactTypes" [formControl]="contact.controls['type']"></custom-select>
+          </div>
+          <div class="col-md-8">
+            <input type="text" class="form-control" [formControl]="contact.controls['value']">
+            <br>
+            <validator-message [field]="contact.controls['value']"></validator-message>
+          </div>
+          <div class="col-md-1">
+            <button class="btn btn-danger btn-block" type="button" (click)="removeContact(i);">X</button>
+          </div>
+        </div>
+      </div>
+      <validator-message [field]="signUpForm.get('contacts')"></validator-message>
+
+      <div class="clearfix text-right">
+        <button class="btn btn-info" type="button" (click)="addContact();">Add new</button>
+      </div>
+    </fieldset>
+
+    <fieldset formGroupName="passwords">
+      <legend>Password</legend>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label>Type password</label>
+            <input type="password" formControlName="pwd" class="form-control">
+          </div>
+          <validator-message [field]="signUpForm.get('passwords').get('pwd')"></validator-message>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label>Confirm password</label>
+            <input type="password" formControlName="confirm" class="form-control">
+          </div>
+          <validator-message [field]="signUpForm.get('passwords').get('confirm')"></validator-message>
+        </div>
+        <div class="col-md-12">
+          <br>
+          <validator-message [field]="signUpForm.get('passwords')"></validator-message>
+        </div>
+      </div>
+    </fieldset>
+
+    <div class="clearfix text-right">
+      <button class="btn btn-success btn-lg" type="submit">Submit</button>
+    </div>
+  </form>
+
+  <div *ngIf="userData">
+    <hr>
+    <h3>Ok, you can send this data to server.</h3>
+    <pre>{{userData|json:2}}</pre>
+  </div>
+</div>

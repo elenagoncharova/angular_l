@@ -1,0 +1,12 @@
+.text-product {
+    min-width: 300px;
+    padding: 25px 0;
+}
+.text-product td{
+    font-size: 20px;
+    padding: 5px 10px;
+}
+
+.reset {
+    margin-right: 20px;
+}

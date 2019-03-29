@@ -1,0 +1,15 @@
+.item {
+    border: 1px solid;
+    padding: 20px;
+    cursor: pointer;
+}
+.item img{
+    max-width: 200px;
+}
+.item p{
+    font-size: 18px;
+}
+
+.not-active {
+    color: #ee6666;
+}

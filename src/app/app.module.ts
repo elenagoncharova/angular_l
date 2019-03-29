@@ -3,70 +3,63 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-
 import { HeaderComponent } from './header/header.component';
-import { TopBlockComponent } from './top-block/top-block.component';
-import { ProductComponent } from './product/product.component';
-import { InformComponent } from './inform/inform.component';
 import { FooterComponent } from './footer/footer.component';
-import { DescriptionComponent } from './description/description.component';
-import { ContentComponent } from './content/content.component';
-import { BackgroundDirective } from './directives/background.directive';
-import { TextStyleDirective } from './directives/text-style.directive';
-import { ValidatorMessageComponent } from './directives/validator-message.directive';
-import { ProdService } from './prod.service';
-import { HttpClientModule } from '@angular/common/http';
-import { ArticleService } from './articles.service';
-import { MainContainerComponent } from './main-container/main-container.component';
-import { ArticleComponent } from './article/article.component';
-import { Form1Component } from './form1/form1.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { Form2Component } from './form2/form2.component';
-import { Form3Component } from './form3/form3.component';
-import { CustomSelectComponent } from './shared/custom-select/custom-select.component';
-import { PipeComponent } from './pipe/pipe.component';
-import { PowPipe } from './pow.pipe';
-import { CarFilterPipe } from './car-filter.pipe';
-import { Page1Component } from './pages/page1/page1.component';
-import { Page2Component } from './pages/page2/page2.component';
-
-
+import { PagesComponent } from './pages/pages.component';
+import {ProdService} from '../service/prod.service';
+import { ProductComponent } from './pages/product/product.component';
+import { GoodsComponent } from './pages/product/goods/goods.component';
+import { DescriptionComponent } from './pages/product/description/description.component';
+import { InformComponent } from './pages/product/inform/inform.component';
+import { ArticlesComponent } from './pages/articles/articles.component';
+import { MainArticleComponent } from './pages/articles/main-article/main-article.component';
+import {ArticleService} from './articles.service';
+import {HttpClientModule} from '@angular/common/http';
+import {NgbdCarouselBasic} from './home/home-page/carousel-basic';
+import {NgbActiveModal, NgbModal, NgbModalConfig, NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { HomeComponent } from './home/home.component';
+import { FormComponent } from './pages/form/form.component';
+import { ReactiveComponent } from './pages/form/reactive/reactive.component';
+import { TemplateComponent } from './pages/form/template/template.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {CustomSelectComponent} from './shared/custom-select/custom-select.component';
+import {ValidatorMessageComponent} from './directives/validator-message.directive';
+import { PipeComponent } from './pages/pipe/pipe.component';
+import {InputFilterPipe} from './input-filter.pipe';
+import { SwitchComponent } from './pages/switch/switch.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    TopBlockComponent,
-    ProductComponent,
-    InformComponent,
     FooterComponent,
+    PagesComponent,
+    ProductComponent,
+    GoodsComponent,
     DescriptionComponent,
-    ContentComponent,
-    BackgroundDirective,
-    TextStyleDirective,
-    MainContainerComponent,
-    ArticleComponent,
-    Form1Component,
-    Form2Component,
-    ValidatorMessageComponent,
-    Form3Component,
+    InformComponent,
+    ArticlesComponent,
+    MainArticleComponent,
+    NgbdCarouselBasic,
+    HomeComponent,
+    FormComponent,
+    ReactiveComponent,
+    TemplateComponent,
     CustomSelectComponent,
+    ValidatorMessageComponent,
     PipeComponent,
-    PowPipe,
-    CarFilterPipe,
-    Page1Component,
-    Page2Component
+    InputFilterPipe,
+    SwitchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule,
     HttpClientModule,
-      FormsModule,
-      ReactiveFormsModule,
+    NgbModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
-  providers: [ ProdService, ArticleService],
+  providers: [ProdService, ArticleService, NgbModalConfig, NgbModal, NgbActiveModal],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
