@@ -19,11 +19,9 @@ export class AddItemModalComponent {
   constructor(
       private fb: FormBuilder,
       public activeModal: NgbActiveModal,
-      private mainService: ProdService,
   ) {}
 
   public onSubmit(): void {
-    this.mainService.addNewProduct(this.addItemForm.controls.name.value, this.addItemForm.controls.price.value);
     this.activeModal.close(this.addItemForm.controls);
   }
 

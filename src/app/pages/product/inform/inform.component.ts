@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ProdService} from '../../../../service/prod.service';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import {AddItemModalComponent} from '../../add-item-modal/add-item-modal.component';
+import {FormBuilder, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-inform',
@@ -13,7 +14,7 @@ export class InformComponent implements OnInit {
 
   product = [];
 
-  constructor (private service: ProdService, private modalService: NgbModal) {}
+  constructor (private service: ProdService, private modalService: NgbModal, private fb: FormBuilder, private mainService: ProdService) {}
 
   prodItem = {
     name: '',
@@ -34,7 +35,7 @@ export class InformComponent implements OnInit {
   public openModal(): void {
     const modalRef = this.modalService.open(AddItemModalComponent);
     modalRef.result.then((result) => {
-      console.log(result);
+      this.mainService.addNewProduct(result.name.value, result.price.value);
     });
   }
 
