@@ -48,14 +48,14 @@ export class TemplateComponent {
   //   console.log('Submited', form);  // this.form
   // }
 
-  submitForm() {
+  submitForm(form: NgForm) {
     event.preventDefault();
-    console.log('Submited', this.form);
+    console.log('Submited', form);
 
     this.isSubmited = true;
-    this.formData = this.form.value;
+    this.formData = form.value;
 
-    this.form.reset();
+    form.reset();
   }
 
 }
